@@ -1,4 +1,4 @@
-# MINI-SELFBOTV2
+# MINI-SELFBOT
 ### LINE SELFBOT UNOFFICIAL
 
 <img alt="Sample.jpg" src= "https://i.ibb.co/TrHsMzY/Imjustgood.jpg">
