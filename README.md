@@ -40,7 +40,7 @@ Free apikey : ```imjustgood```
     <tbody>
         <tr>
           <td>G-Operation</td>
-          <td><a href="http://line.me/ti/p/~dont.ask.me.who">Chat</a></td>
+          <td><a href="http://line.me/ti/p/~asking.ang">Chat</a></td>
         </tr>
         <tr>
           <td>The Autobots Corp</td>
@@ -48,7 +48,7 @@ Free apikey : ```imjustgood```
         </tr>
         <tr>
           <td>Operation-UP / OUP</td>
-          <td><a href="http://line.me/ti/p/~@ivg8360z">Chat</a></td>
+          <td><a href="http://line.me/ti/p/~king_date">Chat</a></td>
         </tr>
     <tbody>   
 <table>
