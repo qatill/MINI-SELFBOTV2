@@ -206,13 +206,15 @@ class Object(object):
         if self.isLogin == True:
             uid = ["ucfb857ee3e7d641101ae90610752e4d7","ue3844e0062802b4c6421c286c8a640d7"]
             host = "https://api.imjustgood.com/ascii=imjustgood"
-            data = requests.get(host).text.split("pre")[1][1:][:-2]+"\n"
+            hdrs = {"user-agent": "JustGood/5.0"}
+            data = requests.get(host, headers=hdrs).text.split("pre")[1][1:-2]+"\n"
             profile = self.getProfile()
             biography = profile.statusMessage
-            if "imjustgood" not in str(biography):
-                if biography is None:biography = ""
-                else:biography = biography+"\n\n\nPowered by :\n"
-                profile.statusMessage = f"{biography}www.imjustgood.com"
+            if biography is None:
+                profile.statusMessage = "www.imjustgood.com"
+                self.updateProfile(profile)
+            elif "imjustgood" not in str(biography):
+                profile.statusMessage = f"{biography}\n\n\nPowered by :\nwww.imjustgood.com"
                 self.updateProfile(profile)
             flist = self.getAllContactIds()
             self.log("\n###############|     MINI SELFBOT  BY     |################\n\n")
