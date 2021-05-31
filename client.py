@@ -11,13 +11,12 @@ from threading import Thread, active_count
 import os,traceback,sys,json,time,ast,requests,re,random,pytz
 from Liff.ttypes import LiffChatContext, LiffContext, LiffSquareChatContext, LiffNoneContext, LiffViewRequest
 """
-                      **  MINI SELFBOT VERSION 2 ** 
+          **  JUSTGOOD MINI SELFBOT  ** 
 
-                    BOT TYPE      -  MINI SELFBOT
-                    DEVELOPER     -  IMJUSTGOOD.COM/TEAM
-                    SOURCE LIB    -  PYPI/LINEPY
-                    MEDIA API     -  PYPI/JUSTGOOD
-                    PUBLISHED     -  GITHUB.COM/GOODOP/MINI-SELFBOTV2
+        BOT TYPE      -  MINI SELFBOT
+        DEVELOPER     -  IMJUSTGOOD.COM/TEAM
+        SOURCE LIB    -  PYPI/LINEPY
+        MEDIA API     -  PYPI/JUSTGOOD
 """
 login = json.loads(open('Data/token.json','r').read())
 setting = json.loads(open('Data/settings.json','r').read())
@@ -978,8 +977,7 @@ def Oup(op):
                          client.sendFlexText(to,data)
                       if cmd.startswith(".apikey: ") or cmd.startswith(rname + "apikey: "):
                           if search == "status":
-                              url = f"{host}/status?apikey={setting['apikey']}"
-                              data = json.loads(requests.get(url).text)
+                              data = media.status(setting['apikey'])
                               main = data["result"]
                               info = "𝐀𝐏𝐈.𝐈𝐌𝐉𝐔𝐒𝐓𝐆𝐎𝐎𝐃.𝐂𝐎𝐌"
                               info += f"\n\nID : {main['id']}"
@@ -1519,8 +1517,7 @@ def Oup(op):
 
 
                       if cmd.startswith(".fancy: ") or cmd.startswith(rname + "fancy: "):
-                          url = f"{host}/fancy?text={link}"
-                          data = json.loads(requests.get(url).text)
+                          data = media.fancy(link)
                           main = ""
                           for s in data["result"]:
                               main += "\n{}\n".format(s)
@@ -1530,24 +1527,20 @@ def Oup(op):
                       if cmd.startswith(".customlink: ") or cmd.startswith(rname + "customlink: "):
                           query = link.split()
                           if len(query) == 2:
-                             url = f"{host}/custom/make"
-                             headers = {"label": query[0], "url": query[1]}
-                             data = json.loads(requests.get(url, headers=headers).text)
+                             data = media.customlink(query[0], query[1])
                              main = data["result"]
                              result = "URL Shortened : {}".format(main)
                              client.sendReplyMessage(ids,to,result)
 
                       if cmd.startswith(".checkip: ") or cmd.startswith(rname + "checkip: "):
-                          url = f"{host}/ip={link}"
-                          data = json.loads(requests.get(url).text)
+                          data = media.check_ip(link)
                           main = data['result']
                           result = flex.checkIP(main)
                           client.sendFlex(to,result)
 
                       if cmd == ".header?" or cmd == rname + "header?":
                           client.sendMessage(to,"loading..")
-                          url = f"{host}/line"
-                          data = json.loads(requests.get(url).text)
+                          data = media.lineapp()
                           main = data['result']
                           result = flex.linever(main)
                           client.sendFlex(to,result)
