@@ -26,7 +26,7 @@ $ python3 client.py
 ```
 
 ### Authtoken
-Input your Authtoken or Email <a href="https://github.com/RendyTR/LINE-SelfBOT/blob/main/data/token.json">here</a>
+Input your Authtoken or Email <a href="https://github.com/RendyTR/LINE-SelfBOT/blob/main/Data/token.json">here</a>
 
 ### Apikey
 Free Apikey : ```imjustgood```
