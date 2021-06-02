@@ -30,7 +30,7 @@ Input your Authtoken or Email <a href="https://github.com/RendyTR/LINE-SelfBOT/b
 
 ### Apikey
 Free Apikey : ```imjustgood```
-<br>Input the apikey <a href="https://github.com/RendyTR/LINE-PublicBOT/blob/2119f04bcdf6fe33eec71f6746fd0bbb57d31b85/data/api.json#L2">here.</a>
+<br>Input the apikey <a href="https://github.com/RendyTR/LINE-SelfBOT/blob/b8951ab32bc5e206a9a26742d63107304574fc1a/Data/settings.json#L4>here.</a>
 <br><br>Free Apikey is Public Usage (50 Hits/Days)
 <br>Contact our team to upgrade Premium Apikey (3000 Hits/Days)
 
