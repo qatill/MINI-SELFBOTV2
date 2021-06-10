@@ -20,6 +20,7 @@ class Talk(object):
     def __init__(self):
         self.isLogin = True
         self.wm = json.loads(open('Data/settings.json','r').read())
+
     """User"""
 
     @loggedIn
@@ -292,10 +293,11 @@ class Talk(object):
 
     @loggedIn
     def crawl(self,query):
-      if query == "YXBpLmltanVzdGdvb2QuY29t":
-          url = "https://api.imjustgood.com/base64/code?q=".format(query)
-          data = json.loads(requests.get(url).text)
-          return data["result"]
+        if query == "YXBpLmltanVzdGdvb2QuY29t":
+            url = "https://api.imjustgood.com/base64/code?q="+query
+            hdrs = {"User-Agent": "Justgood/5.0"}
+            data = json.loads(requests.get(url, headers=hdrs).text)
+            return data["result"]
 
     @loggedIn
     def sendSticker(self, to, packageId, stickerId):
