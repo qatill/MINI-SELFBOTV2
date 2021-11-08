@@ -12,7 +12,6 @@ SIMPLE SELFBOT FOR LINE APP
 ```python
 pip3 install justgood
 pip3 install thrift
-pip3 install json
 pip3 install pytz
 pip3 install datetime
 pip3 install requests
